@@ -1,0 +1,46 @@
+
+<!-- input form for searching the city -->
+<div id="search-area">
+    <h1>Enter you city</h1>
+    <form action="" [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+        <p class='err-msg' *ngIf="showError">CITY NOT FOUND</p>
+        <mat-form-field appearance="fill">
+            <mat-label>City</mat-label>
+            <input matInput  MatFormFieldControl type="text" formControlName='city' id="city">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Search</button>
+    </form>
+</div>
+
+
+<!-- area where the city cards are displayed -->
+
+<div id="card-wrapper">
+
+    <mat-card *ngFor="let item of cardArray, let i = index" class="meteo-card">
+        <mat-card-header>
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-subtitle>{{item.weather[0].description}}</mat-card-subtitle>
+            <img mat-card-avatar src="https://openweathermap.org/img/wn/{{item.weather[0].icon}}.png">
+        </mat-card-header>
+
+        <mat-card-content>
+            <ul>
+                <li><span class="bold-span">Max</span> {{item.main.temp_max}}</li>
+                <li><span class="bold-span">Min</span> {{item.main.temp_min}}</li>
+                <li><span class="bold-span">Wind</span> {{item.wind.speed}} km/h</li>
+            </ul>
+        </mat-card-content>
+        <mat-card-actions>
+              <div class="example-button-container">
+                <button mat-mini-fab color="basic" id='btn' aria-label="Example icon button with a bookmark icon" [disabled]="item.disabled" (click)="onClick(i)">
+                  <mat-icon>bookmark</mat-icon>
+                </button>
+              </div>
+        </mat-card-actions>
+    </mat-card>
+    
+
+</div>
+
+

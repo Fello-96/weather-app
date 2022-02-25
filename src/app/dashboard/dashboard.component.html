@@ -1,0 +1,20 @@
+<app-filter-tab [orderedArray]="dashTransferedArray"></app-filter-tab>
+
+
+<mat-card *ngFor='let item of dashTransferedArray, let i = index' >
+        <mat-card-header>
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-subtitle>{{item.weather[0].description}}</mat-card-subtitle>
+            <img mat-card-avatar src="https://openweathermap.org/img/wn/{{item.weather[0].icon}}.png">
+        </mat-card-header>
+
+        <mat-card-content>
+            <ul>
+                <li><span class="bold-span">Max</span> {{item.main.temp_max}}</li>
+                <li><span class="bold-span">Min</span> {{item.main.temp_min}}</li>
+                <li><span class="bold-span">Wind</span> {{item.wind.speed}} km/h</li>
+            </ul>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>

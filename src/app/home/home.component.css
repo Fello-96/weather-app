@@ -1,0 +1,35 @@
+#search-area {
+    padding: 2em;
+ 
+}
+
+#search-area button{
+    margin-left: 1.5em;
+    padding: 0px 21px;
+}
+
+mat-form-field.mat-form-field {
+    font-size: 14px;
+}
+
+#card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meteo-card{
+    width: 10vw;
+    background-color: #1976D2;
+    color: white;
+    margin: 20px;
+}
+
+.bold-span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.err-msg{
+    color: red;
+    font-weight: bold;
+}

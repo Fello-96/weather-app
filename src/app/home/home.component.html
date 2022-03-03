@@ -1,8 +1,9 @@
 
 <!-- input form for searching the city -->
 <div id="search-area">
-    <h1>Enter you city</h1>
+    <h1>Search a city</h1>
     <form action="" [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+        <!-- error message -->
         <p class='err-msg' *ngIf="showError">CITY NOT FOUND</p>
         <mat-form-field appearance="fill">
             <mat-label>City</mat-label>
@@ -31,6 +32,7 @@
                 <li><span class="bold-span">Wind</span> {{item.wind.speed}} km/h</li>
             </ul>
         </mat-card-content>
+
         <mat-card-actions>
               <div class="example-button-container">
                 <button mat-mini-fab color="basic" id='btn' aria-label="Example icon button with a bookmark icon" [disabled]="item.disabled" (click)="onClick(i)">
@@ -39,7 +41,6 @@
               </div>
         </mat-card-actions>
     </mat-card>
-    
 
 </div>
 

@@ -7,16 +7,17 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+        <!-- router link to home where you can search a city -->
         <a mat-list-item href="javascript:void(0)" routerLink="home">
           <mat-icon mat-list-icon color="primary">home</mat-icon>
           Home
         </a>
-        
+        <!-- router link to dashboard where you can see the city that you selected -->
         <a mat-list-item href="javascript:void(0)" routerLink="dashboard">
           <mat-icon mat-list-icon color="primary">dashboard</mat-icon>
           Dashboard
-         
         </a>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

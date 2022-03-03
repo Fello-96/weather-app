@@ -10,8 +10,10 @@
       <mat-label>Order</mat-label>
       <mat-select>
         <!-- select options with event binding -->
-        <mat-option (click)="ascending()" value="A-Z">Name (A-Z)</mat-option>
-        <mat-option (click)="descending()" value="Z-A">Name (Z-A)</mat-option>
+        <mat-option (click)="ascending()" >Name (A-Z)</mat-option>
+        <mat-option (click)="descending()">Name (Z-A)</mat-option>
+        <mat-option (click)="maxTemp()">Hottest</mat-option>
+        <mat-option (click)="minTemp()">Coldest</mat-option>
       </mat-select>
     </mat-form-field>
   </mat-expansion-panel>

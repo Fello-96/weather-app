@@ -23,6 +23,7 @@ export class FilterTabComponent implements OnInit {
 
   // order from A-Z
   ascending(){
+    console.log(this.orderedArray)
     this.orderData.orderAZ(this.orderedArray)
   }
 
@@ -31,7 +32,15 @@ export class FilterTabComponent implements OnInit {
     this.orderData.orderZA(this.orderedArray)
   }
 
-  
+  // order from temp max to temp min
+  maxTemp(){
+    this.orderData.orderHottest(this.orderedArray)
+  }
+
+  // order from temp min to temp max
+  minTemp(){
+    this.orderData.orderColdest(this.orderedArray)
+  }
 
 
 

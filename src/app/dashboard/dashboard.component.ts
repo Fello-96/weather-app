@@ -13,11 +13,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.dashTransferedArray= this.dataTransfer.dashGet() 
-    
-
+    this.dashTransferedArray = this.dataTransfer.dashGet() 
   }
-
+  
   
 
 }

@@ -1,3 +1,5 @@
+<!-- angular material navbar menu  -->
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -29,7 +31,7 @@
       </button>
       <span>Weather App</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <!-- router-outlet -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

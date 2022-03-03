@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { OrderDataService } from 'src/services/order-data.service';
+
 
 @Component({
   selector: 'app-filter-tab',
@@ -10,17 +12,26 @@ export class FilterTabComponent implements OnInit {
   //material field
   panelOpenState = false;
 
-  //array from dashboard
+  //array recived from dashboard
   @Input() orderedArray: any[] = []
-  @Input() indexReceived: any
 
-  
-  constructor() { }
+  // service that order the receivede array
+  constructor(private orderData: OrderDataService) { }
 
   ngOnInit(): void {
-    
-    
   }
+
+  // order from A-Z
+  ascending(){
+    this.orderData.orderAZ(this.orderedArray)
+  }
+
+  //order from Z-A
+  descending(){
+    this.orderData.orderZA(this.orderedArray)
+  }
+
+  
 
 
 

@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   
   // weather http request handler
   cityData: any
-  tryCity: any
   cardArray: any[] = []
   showError: boolean = false
   disabled: boolean = false
@@ -46,7 +45,6 @@ export class HomeComponent implements OnInit {
   }
 
   onClick(index: number){
-    console.log(this.cityData, this.tryCity)
       this.transferData.dashAdd(this.cardArray[index])
       this.cardArray[index].disabled = true
       

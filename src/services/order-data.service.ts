@@ -6,14 +6,18 @@ import { Injectable } from '@angular/core';
 export class OrderDataService {
 
 
-  modifiedArr: any[] = []
 
   constructor() { }
 
 
-  // fromAtoZ(input: any[], first: string, last: string){
-  //   for(let i = 0; i < input.length; i++){
-  //     input[i].name
-  //   }
-  // }
+  orderAZ(input: any[]){
+    input.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    return input
+  }
+
+
+  orderZA(input: any[]){
+    input.sort((a, b) => (a.name > b.name) ? 1 : -1).reverse()
+    return input
+  }
 }

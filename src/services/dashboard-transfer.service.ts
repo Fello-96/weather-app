@@ -14,7 +14,6 @@ export class DashboardTransferService {
   }
 
   dashGet(){
-    console.log(this.dashBoardArr)
     return this.dashBoardArr
   }
 }

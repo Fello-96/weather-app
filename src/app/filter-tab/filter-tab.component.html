@@ -1,3 +1,4 @@
+<!-- material layout with accordion, thanks to this i am able to filter the data in dashboard bt click the option field in mat-select -->
 <mat-accordion>
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
@@ -8,10 +9,10 @@
     <mat-form-field appearance="fill">
       <mat-label>Order</mat-label>
       <mat-select>
-        <mat-option value="1">1</mat-option>
+        <!-- select options with event binding -->
+        <mat-option (click)="ascending()" value="A-Z">Name (A-Z)</mat-option>
+        <mat-option (click)="descending()" value="Z-A">Name (Z-A)</mat-option>
       </mat-select>
     </mat-form-field>
-    
   </mat-expansion-panel>
-  
 </mat-accordion>

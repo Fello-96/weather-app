@@ -1,10 +1,10 @@
 # WeatherApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+Hi everyone my name is Marcello Pascolini and here it is one of my first project built in Angular 13.2.3!
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I built a simple meteo app using OpenWeatherMap API(https://openweathermap.org/api) 
 
 ## Code scaffolding
 

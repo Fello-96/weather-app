@@ -11,7 +11,10 @@ I built a simple meteo app using OpenWeatherMap API (https://openweathermap.org/
 - Wind Speed
 
 I built a component called Dashboard where you can add your favorite cities and order them from A-Z (reversed also) and for min and max temperature.
-I manage with service the following process:
+In the home component you find a simple clock created using DatePipe and setInterval (the interval is stopped when component is destroyed).
+While the clock isn't ready you can see a spinner running.
+
+I manage with services the following process:
 - Http Request
 - Passing data between components
 - Ordering data in Dashboard componeny
@@ -19,4 +22,7 @@ I manage with service the following process:
 ## Technologies
 
 I used Angular (13.2.3) and Angular Material to emprove UX/UI
+
+## Layout
+
 

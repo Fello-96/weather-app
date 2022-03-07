@@ -1,6 +1,12 @@
+#toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #search-area {
-    padding: 2em;
- 
+    padding: 1em 2em;
+    margin: 2em;
 }
 
 #search-area button{
@@ -9,19 +15,31 @@
 }
 
 mat-form-field.mat-form-field {
-    font-size: 14px;
+    font-size: 1em;
 }
 
 #card-wrapper{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    padding: 1.5em;
+}
+
+.white-text{
+    color: white;
+}
+
+.card-resize{
+    display: flex;
+    justify-content: space-between;
 }
 
 .meteo-card{
-    width: 10vw;
+    min-width: 210px;
     background-color: #1976D2;
     color: white;
-    margin: 20px;
+    padding: 3em 1.5em; 
+    margin: 1em;
 }
 
 .bold-span{
@@ -32,4 +50,52 @@ mat-form-field.mat-form-field {
 .err-msg{
     color: red;
     font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    #toolbar {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #card-wrapper{
+        display: flex;
+        justify-content: space-around;
+        padding: 2em; 
+    }
+
+    .meteo-card{
+        min-width: 250px;
+        padding: 1.5em;
+    }
+  }
+
+
+@media only screen and (max-width: 730px){
+    #toolbar{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #search-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    #search-area button{
+        padding: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #card-wrapper{
+        display: flex;
+        justify-content: center;
+        padding: 2em; 
+    }
 }

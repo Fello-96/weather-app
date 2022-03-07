@@ -1,0 +1,10 @@
+
+<mat-spinner *ngIf="loaded" id="spinner"></mat-spinner>
+
+<div id="clock-box" *ngIf="timeCharged">
+    <p class="clock-item">{{dateTime | date:'HH'}}</p>
+    <span class="dividers">:</span>
+    <p class="clock-item">{{dateTime | date: 'mm'}}</p>
+    <span class="dividers">:</span>
+    <p class="clock-item">{{dateTime | date:'ss'}}</p>
+</div>

@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { DashboardTransferService } from 'src/services/dashboard-transfer.service';
 import { HttpService } from 'src/services/httpService';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,14 +21,12 @@ export class HomeComponent implements OnInit {
   cardArray: any[] = []
   showError: boolean = false
   disabled: boolean = false
-  
 
-  
-  constructor(private http: HttpService, private transferData: DashboardTransferService) { }
+constructor(private http: HttpService, private transferData: DashboardTransferService) { }
 
-  ngOnInit(): void {
-  }
-
+ngOnInit(): void {
+    
+}
 
   // onSubmit http request is triggered
   onSubmit(){
@@ -44,14 +43,10 @@ export class HomeComponent implements OnInit {
     this.cityForm.reset()
   }
 
+  //onClick passing array data with index while the add button become disabled
   onClick(index: number){
       this.transferData.dashAdd(this.cardArray[index])
       this.cardArray[index].disabled = true
-      
-
-      
-      
-    
   }
 
 

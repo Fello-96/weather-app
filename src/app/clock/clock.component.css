@@ -1,0 +1,46 @@
+#clock-box{
+    background-color: #4153b8 ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: .5em;
+    margin: 3em;
+}
+
+.clock-item{
+    background-color: white;
+    padding: .5em ;
+    margin: .5em;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3F51B5;
+}
+
+.dividers{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#spinner{
+    margin: 3em;
+}
+
+
+
+@media only screen and (max-width: 730px){
+    #clock-box{
+        padding: .5em;
+        margin: 1.5em;
+    }
+
+    .clock-item{
+        padding: .5em ;
+        margin: .5em;
+        border-radius: 10px;
+        font-size: 1em;
+        font-weight: bold;
+
+    }
+}

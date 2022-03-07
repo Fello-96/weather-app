@@ -29,20 +29,21 @@
             <img mat-card-avatar src="https://openweathermap.org/img/wn/{{item.weather[0].icon}}.png" alt="meteo-icon">
         </mat-card-header>
 
-        <mat-card-content class="card-resize">
+        <mat-card-content >
             <ul>
-                <li><span class="bold-span">Max</span>: {{item.main.temp_max}}</li>
-                <li><span class="bold-span">Min</span>: {{item.main.temp_min}}</li>
+                <li><span class="bold-span">Max</span>: {{item.main.temp_max}} °C</li>
+                <li><span class="bold-span">Min</span>: {{item.main.temp_min}} °C</li>
                 <li><span class="bold-span">Wind</span>: {{item.wind.speed}} km/h</li>
             </ul>
-            <mat-card-actions>
+    
+        </mat-card-content>
+        <mat-card-actions >
                 <div class="example-button-container">
                   <button mat-mini-fab color="basic" id='btn' aria-label="Example icon button with a bookmark icon" [disabled]="item.disabled" (click)="onClick(i)">
                     <mat-icon>bookmark</mat-icon>
                   </button>
                 </div>
           </mat-card-actions>
-        </mat-card-content>
         
     </mat-card>
 

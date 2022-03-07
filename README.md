@@ -25,5 +25,5 @@ I used Angular (13.2.3) and Angular Material to emprove UX/UI
 
 ## Layout
 
-![This is an image](./assets/github-weather-app.png)
+![This is an image](../assets/github-weather-app.png)
 
